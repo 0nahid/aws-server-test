@@ -104,7 +104,7 @@ async function run() {
         });
         // get the order 
         app.get('/order', jwtCheck, async (req, res) => {
-            const decodedEmail = req.decoded?.email;
+            const decodedEmail = req.decoded.email;
             const email = req.query.email;
             if (email === decodedEmail) {
                 const query = { email: email };
